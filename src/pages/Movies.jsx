@@ -1,4 +1,4 @@
-import { useParams, useNavigate, useMatch, useLocation } from "react-router-dom";
+import { useParams, useNavigate,  useLocation } from "react-router-dom";
 
 function Movies() {
   const { id } = useParams();

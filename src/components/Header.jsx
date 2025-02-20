@@ -1,4 +1,5 @@
-import { Link } from "react-router-dom";
+//import { NavLink } from "react-router-dom";
+import { CustomLink } from "./CustomLink";
 
 function Header() {
   return (
@@ -9,10 +10,28 @@ function Header() {
         </a>
         <ul id="nav-mobile" className="right hide-on-med-and-down">
           <li>
-            <Link to="/contacts">Contacts</Link>
+            <CustomLink
+              to="/contacts"
+              className={({ isActive }) => (isActive ? "active-link" : null)}
+            >
+              Contacts
+            </CustomLink>
           </li>
           <li>
-            <Link to="/about">About</Link>
+            <CustomLink
+              to="/about"
+              className={({ isActive }) => (isActive ? "active-link" : null)}
+            >
+              About
+            </CustomLink>
+          </li>
+          <li>
+            <CustomLink
+              to="/blog"
+              className={({ isActive }) => (isActive ? "active-link" : null)}
+            >
+              Blog
+            </CustomLink>
           </li>
         </ul>
       </div>
